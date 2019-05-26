@@ -17,16 +17,11 @@ type State = {
 }
 
 export default class WheelPicker extends React.Component<Props, State> {
-  static defaultProps = {
-    style: {
-      width: 200,
-      height: 150,
-    },
-  }
-
-  constructor(props: Props){
-    super(props)
+  constructor(props) {
+    super(props);
     this.state = {
+      width: props.width ? props.width : 200,
+      height: props.height ? props.height : 150,
       selectedItem: props.selectedItem
     }
   }
